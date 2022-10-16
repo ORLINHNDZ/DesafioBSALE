@@ -6,7 +6,7 @@ const path = require("path");
 const app = express();
 //Seguridad Extra
 const helmet = require('helmet')
-const cors = require('cors')
+
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 
@@ -37,7 +37,7 @@ app.use(rateLimiter({
   max: 100, // limite de 100 peticiones por ventana
 }))
 app.use(helmet())
-app.use(cors())
+
 app.use(xss())
 
 //Inicialazamos servidor
