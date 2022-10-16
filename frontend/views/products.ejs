@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Tienda BSALE</title>
+</head>
+<div class="Promo">
+    <h3>
+       ¡Envio Gratis en tus compras mayores a 1000$!</h3> 
+    </h3>
+</div>
+<div class="Container">
+<div class="Wrapper">
+    <div class="Left">
+        <a href="/" class="title">Tienda BSALE</a>
+        <button class="Language">
+            ES</button>
+        
+        <div>
+            <form action="/prod" method="GET" class="SearchContainer" id="formulario">
+
+                <input style="color: gray; font-size: 16px;"   type="text" name="name" placeholder="Buscar un producto" id="inputProductos">
+                <button class="Language">Buscar</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="Center">
+        <h1 class="Logo">BSALE TEST</h1>
+    </div>
+    <div class="Right">
+        <div class="Button">
+            <div>
+                <select id="filtroSelect" onchange="if (this.value) window.location.href=this.value">
+                    <option value="" selected>Filtrar por categorias</option>
+                    <option value="/">Todos</option>
+                    <option value="/1">Bebida Energética</option>
+                    <option value="/2">Pisco</option>
+                    <option value="/3">Ron</option>
+                    <option value="/4">Bebida</option>
+                    <option value="/5">Snack</option>
+                    <option value="/6">Cerveza</option>
+                    <option value="/7">Vodka</option>
+                </select>
+            </div>
+                <div>
+                    <select id="precioAsc" onchange="if (this.value) window.location.href=this.value">
+                        <option value="" selected>Filtrar Productos</option>
+                        <option value="/Alfa">Alfabeticamente</option>
+                        <option value="/Asc">Menor a Mayor</option>
+                        <option value="/Desc">Mayor a Menor</option>
+                    </select>
+                </div>
+            </div>
+    </div>
+    
+
+</div>
+</div>
+
+<!-- End header -->
+<!-- Hero Image -->
+<div class="heroImg">
+    <div class="WrapperheroImg">
+        <div class="Slide">
+            <div class="ImgContainer">
+                <img src="https://i.ibb.co/R3y2GDP/pexels-denys-gromov-6640619.jpg">
+
+            </div>
+            <div class="InfoContainer">
+                <h3 class="Title">Octubre de Ofertas Especiales</h3>
+                <p class="Desc">Convierte esos momentos especiales en algo inolvidable</p>
+                <button class="Button">Bebidas</button>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Hero Image -->
+
+<!--Display de Productos  -->
+<div class="Center">
+<div class="grid">
+    <% data.forEach(sql => { %>
+     <article class="block" id="products">
+         <img class="imgGrid" src=<%- sql.url_image %> >
+         <div class="block-content">
+             <h4>
+                 <%- sql.name %>
+             </h4>
+             <h4>$ <%- sql.price %></h4>
+             <button class="Button">
+                <a class="fa fa-shopping-cart" href="#"> </a>
+             </button>
+             
+         </div>
+     </article>
+ 
+   <% });  %>
+   <div class="break"></div>
+   
+    </div>
+</div>
+<!--Fin Display de Productos  -->
+
+<!-- Footer -->
+ <div class="ContainerFooter">
+    <div class="LeftFooter">
+        <h1>Bsale Test</h1>
+        <p class="DescFooter"></p>
+    
+    <div class="SocialContainer">
+        <p class="SocialIcons">Siguenos en nuestras redes sociales como @Bsale</p>
+    </div>
+    </div>
+    <div class="CenterFooter">
+        <h3 class="TitleFooter">Bebidas</h3>
+        <div class="ListFooter">
+            <p class="ListItem">Pisco</p>
+            <p class="ListItem">Energizantes</p>
+            <p class="ListItem">Ron</p>
+            <p class="ListItem">Cervezas</p>
+            <p class="ListItem">Snacks</p>
+            <p class="ListItem">Vodka</p>
+        </div>
+
+    </div>
+    <div class="RightFooter">
+        <h3 class="TitleFooter">Contactanos</h3>
+        <p class="ContactItem">Chile, Mexico, Colombia</p>
+        <p class="ContactItem">contacto@bsale.com</p>
+        <p class="ContactItem">+124 143242424</p>
+        <div class="ContactItem">
+            <img class="Payment" src="https://i.ibb.co/Qfvn4z6/payment.png">
+        </div>
+    </div>
+ </div>
+ <!-- End Footer -->
+
+</body>
+
+</html>
