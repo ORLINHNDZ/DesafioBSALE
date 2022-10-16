@@ -50,6 +50,8 @@ Xss: Middleware oara sanitizar el input de los usuarios provenientes del POST bo
 ## Deploy
 Para el deployment se utilizó la herramienta de Heroku
 
+Enlace a la previsualizacion:
+https://bsaleorlin.herokuapp.com/
 
 
 ##  Información
