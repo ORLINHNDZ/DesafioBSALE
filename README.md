@@ -19,6 +19,12 @@ Para el desarrollo y ejecución del proyecto deberás instalar las dependencias 
 $npm install
 ```
 
+Para ejecutar el proyecto de manera local deberás ejecutar el siguiente comando
+
+```
+$node ./backend/index.js
+```
+
 ### Node
 - #### Instalar Node en Windows
 
