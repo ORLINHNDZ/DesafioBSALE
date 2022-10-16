@@ -2,6 +2,8 @@
 
 Hola, te agradezco por tomarte el tiempo en ver mi solución al ejercicio técnico.
 
+Dentro de la carpetar raíz del proyecto podras encontrar un documento PDF con la Documentación Técnica del Proyecto.
+
 ---
 
 ## Arquitectura
