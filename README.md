@@ -35,11 +35,19 @@ EJS: EJS nos permite generar aplicaciones rápidas cuando no necesitamos algo de
 
 Dotenv: Para facilitar el acceso a nuestras variables de entorno.
 
+- #### Dependencias de seguridad extra para nuestro servidor
+RateLimiter: Con esta dependencia limitamos las peticiones a nuestra API
 
+Helmet: Nos brinda una poliza de seguridad para mitigar ataques cross-site enre otras cosas.
+
+Cors: Provee caracteristicas de seguridad al navegador para mitigar peticiones cross-origin desde HTTP.
+
+Xss: Middleware oara sanitizar el input de los usuarios provenientes del POST body, Get y parametros URL.
 
 
 ## Deploy
 Para el deployment se utilizó la herramienta de Heroku
+
 
 
 ##  Información
